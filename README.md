@@ -2,6 +2,8 @@
 
 Welcome to the JBlanker Learning Platform! Developed by the innovative team at JB High School, this platform offers a unique environment for exploring and engaging with learning content.
 
+Learn LC [HERE!](https://chunkymonkey00.github.io/JBlanker/)
+
 ## About
 
 JBlanker is a versatile platform designed to support learning experiences in a variety of contexts. Developed with a focus on adaptability and exploration, it provides users with access to a range of tools and resources to facilitate their learning journey.
