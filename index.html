@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the world of education with LC by JB High School. An innovative platform for learning and discovery.">
-    <meta name="keywords" content="education, learning, LC, JB High School, innovative, platform">
-    <meta name="author" content="JB High School">
-    <title>LC by JB High School</title>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,120 +109,25 @@
 </style>
 </head>
 <script>
-	javascript:(function() {
-  var sending = false;
-  var menu = document.createElement('div');
-  var menuContent = document.createElement('div');
-  var button = document.createElement('button');
-	var input = document.createElement('input');
-
-menu.style.cssText = `
-position: fixed;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-z-index: 9999;
-background-color: rgba(123, 0, 0, 0.6);
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-border-radius: 5px;
-width: 250px;
-`;
-
-  menuContent.style.padding = '10px';
-
-  input.style.cssText = `
-  margin-top: 5px;
-	font-family: Arial;
-	font-size: 16px;
-	color: #fff;
-	background-color: #333;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	width: 80%;
-  `
-  function applyFocusStyles() {
-    this.style.outline = 'none';
-    this.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.5)';
-    this.style.borderColor = '#000';
-  }
-
-  function removeFocusStyles() {
-    this.style.outline = '';
-    this.style.boxShadow = '';
-    this.style.borderColor = '';
-  }
-
-  input.addEventListener('focus', applyFocusStyles);
-  input.addEventListener('blur', removeFocusStyles);
-  input.addEventListener('keydown', function(e) {
-    if(e.key == "Enter") {
-      sendToSite();
-    }
-  })
-
-  button.innerHTML = 'Launch JBlanker';
-  button.style.cssText = `
-    font-family: Arial;
-    font-size: 16px;
-    color: #fff;
-    background-color: #333;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 30px;
-  `;
-  button.onclick = sendToSite;
-
-function sendToSite() {
-  if(sending) return;
-  sending = true;
-var link = input.value;
-var proxy = 'https://api.codetabs.com/v1/proxy?quest=';
-fetch(proxy + link)
-.then((response) => response.text())
-.then((text) => {
-	if (text.includes('Error')) {
-	console.warn('Invalid URL or resource not found');
-	sending = false;
-  input.value = "Invalid URL";
-	return;
-	}
-  document.write(text)
-});
-var all = document.getElementsByTagName("*");
-for (var i = 0, max = all.length; i < max; i++) { if (all[i].src) { all[i].src=new URL(all[i].src, link).href;
-	all[i].src=proxy + all[i].src; } } window.onbeforeunload=function(e) { e.preventDefault(); alert(e.toString()); };
-	function locationHashChanged(e) { e.preventDefault(); alert(e); window.location=new URL(e.oldURL, e.newURL).href; }
-	window.onhashchange=locationHashChanged; };
-
-  menuContent.appendChild(button);
-  menuContent.appendChild(input);
-  menu.appendChild(menuContent);
-  document.body.appendChild(menu);
-
-  var isDragging = false;
-  var mouseOffset = { x: 0, y: 0 };
-
-  menuContent.addEventListener('mousedown', function(e) {
-    isDragging = true;
-    mouseOffset.x = e.pageX - menu.offsetLeft;
-    mouseOffset.y = e.pageY - menu.offsetTop;
-  });
-
-  document.addEventListener('mousemove', function(e) {
-    if (isDragging) {
-      menu.style.left = (e.pageX - mouseOffset.x) + 'px';
-      menu.style.top = (e.pageY - mouseOffset.y) + 'px';
-    }
-  });
-
-  document.addEventListener('mouseup', function() {
-    isDragging = false;
-  });
-})();
+javascript:!function(){var
+e=!1,n=document.createElement("div"),t=document.createElement("div"),o=document.createElement("button"),r=document.createElement("input");function
+i(){if(!e){e=!0;var
+n=r.value,t=atob("aHR0cHM6Ly9hcGkuY29kZXRhYnMuY29tL3YxL3Byb3h5P3F1ZXN0PQ==");fetch(t+n).then(e=>e.text()).then(n=>{if(n.includes("Error")){console.warn(atob("SW52YWxpZCBVUkwgb3IgcmVzb3VyY2Ugbm90IGZvdW5k")),e=!1,r.value=atob("SW52YWxpZCBVUkw=");return}document.write(n)});for(var
+o=document.getElementsByTagName("*"),i=0,a=o.length;i<a;i++)o[i].src&&(o[i].src=new
+	URL(o[i].src,n).href,o[i].src=t+o[i].src);window.onbeforeunload=function(e){e.preventDefault(),alert(e.toString())},window.onhashchange=function
+	e(n){n.preventDefault(),alert(n),window.location=new URL(n.oldURL,n.newURL).href}}}n.style.cssText=` position:
+	fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9999; background-color: rgba(123, 0, 0, 0.6);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); border-radius: 5px; width: 250px; `,t.style.padding="10px"
+	,r.style.cssText=` margin-top: 5px; font-family: Arial; font-size: 16px; color: #fff; background-color: #333;
+	padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; width: 80%;
+	`,r.addEventListener("focus",function e(){this.style.outline="none"
+	,this.style.boxShadow="0 0 5px rgba(0, 0, 0, 0.5)" ,this.style.borderColor="#000"
+	}),r.addEventListener("blur",function e(){this.style.outline="" ,this.style.boxShadow="" ,this.style.borderColor=""
+	}),r.addEventListener("keydown",function(e){"Enter"==e.key&&i()}),o.innerHTML="Launch JBlanker" ,o.style.cssText=`
+	font-family: Arial; font-size: 16px; color: #fff; background-color: #333; padding: 10px 20px; border: none;
+	border-radius: 5px; cursor: pointer; margin-left: 30px;
+	`,o.onclick=i,t.appendChild(o),t.appendChild(r),n.appendChild(t),document.body.appendChild(n);var
+	a=!1,d={x:0,y:0};t.addEventListener("mousedown",function(e){a=!0,d.x=e.pageX-n.offsetLeft,d.y=e.pageY-n.offsetTop}),document.addEventListener("mousemove",function(e){a&&(n.style.left=e.pageX-d.x+"px",n.style.top=e.pageY-d.y+"px")}),document.addEventListener("mouseup",function(){a=!1})}();
 </script>
 
 <head>
@@ -259,4 +155,3 @@ for (var i = 0, max = all.length; i < max; i++) { if (all[i].src) { all[i].src=n
 		- human forklift
 	</div>
 </body>
-</html>
